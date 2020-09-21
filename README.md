@@ -9,7 +9,7 @@ To Run this :-
  
  
  
- 2. Fo to the src folder
+ 2. Go to the src folder
  
                            cd  src
                            
