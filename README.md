@@ -19,7 +19,7 @@ To Run this :-
                            
  3.  install requirements.txt
  
-                          pip insall -r requirements.txt
+                          pip install -r requirements.txt
  
   (install required things if needed)
   
