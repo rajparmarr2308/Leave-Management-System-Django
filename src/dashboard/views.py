@@ -245,7 +245,7 @@ def leave_creation(request):
 
 
 			# print(instance.defaultdays)
-			messages.success(request,'Leave Request Sent,wait for ATA Freight Managers response',extra_tags = 'alert alert-success alert-dismissible show')
+			messages.success(request,'Leave Request Sent,wait for BEUTY PARLOUR Managers response',extra_tags = 'alert alert-success alert-dismissible show')
 			return redirect('dashboard:createleave')
 
 		messages.error(request,'failed to Request a Leave,please check entry dates',extra_tags = 'alert alert-warning alert-dismissible show')

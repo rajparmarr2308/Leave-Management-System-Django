@@ -77,10 +77,9 @@ def login_view(request):
 				login(request,user)
 				if login_user.is_authenticated:
 					return redirect('dashboard:dashboard')
-			else:
-			    messages.error(request,'Account is invalid',extra_tags = 'alert alert-error alert-dismissible show' )
-			    return redirect('accounts:login')
-
+				else:
+					messages.error(request,'Account is invalid',extra_tags = 'alert alert-error alert-dismissible show' )
+					return redirect('accounts:login')
 		else:
 			return HttpResponse('data not valid')
 

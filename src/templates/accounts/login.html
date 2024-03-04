@@ -9,7 +9,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title> ATA Freight - Login </title>
+	<title> BEUTY PARLOUR - Login </title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -74,7 +74,7 @@ html,body{
 }
 
 .btn-custom:hover{
-   color: #565656 !important; 
+  color: #565656 !important; 
 }
 
 .forgt-pass-wrp{
@@ -249,14 +249,14 @@ h3{
                             <span class="icon-bar"></span>
                           </button>
 
-                          <a class="navbar-brand" href="/">ATA Freight <span class="sub-title">HRM</span></a>
+                          <a class="navbar-brand" href="/">BEUTY PARLOUR <span class="sub-title">HRM</span></a>
                           
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                           <ul class="nav navbar-nav">
-                            <li class=""><a href="http://www.atafreight.com/" target="_blank">ATA Freight site <span class="sr-only">(current)</span></a></li>
+                            <li class=""><a href="http://www.atafreight.com/" target="_blank">BEUTY PARLOUR site <span class="sr-only">(current)</span></a></li>
 
                           </ul>
                         </div><!-- /.navbar-collapse -->
@@ -268,39 +268,40 @@ h3{
   <section class="sub-parent-wrap">
 
     <section class="container">
-         <section class="row">
+        <section class="row">
             <section class="col col-sm-12">
                   {% if  messages %}
                                     {% for message in messages %}
-                                     <div {% if message.tags %} class="{{ message.tags}}"{% endif %}>
-                                         {{ message }}
-                                         <button type="button" class="close" id = "override-start"data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                         </button>
-                                     </div>
+                                    <div {% if message.tags %} class="{{ message.tags}}"{% endif %}>
+                                        {{ message }}
+                                        <button type="button" class="close" id = "override-start"data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
                       {% endfor %}
                   {% endif %}
             </section>
-         </section>
+        </section>
 
           <section class="row">
 
-             <div class="col-lg-6 col-lg-offset-3">
+            <div class="col-lg-6 col-lg-offset-3">
                 <div class="wrapper-form-index-page shadow">
                     <div class="row text-center">
                         <h3 class="title-h3">User Login</h3>
                     </div>
 
-                     <form action="" method="POST" id="login_form">
-                        {% csrf_token %}
-                        {{ form | crispy}}
-                        <button  type="submit" class="btn btn-primary btn-lg btn-block btn-custom">Login</button>
-                        <div class="forgt-pass-wrp">
-                            <!-- <a href="">Forgotten your password ?</a> -->
-                        </div>
-                     </form>
+                    <form action="" method="POST" id="login_form">
+                      {% csrf_token %}
+                      {{ form | crispy }}
+                      <button type="submit" class="btn btn-primary btn-lg btn-block btn-custom">Login</button>
+                      <div class="forgt-pass-wrp">
+                          <!-- <a href="">Forgotten your password ?</a> -->
+                      </div>
+                    </form>
+                  
 
                 </div>
-             </div>
+            </div>
         
           </section>
     </section><!-- container-->

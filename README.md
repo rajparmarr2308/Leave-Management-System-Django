@@ -1,4 +1,4 @@
-"# Leave-Management-System-Django" 
+<!-- "# Leave-Management-System-Django" 
 
 
 To Run this :-
@@ -38,4 +38,4 @@ To Run this :-
   
  6. Runserver
  
-                          python manage.py runserver
+                          python manage.py runserver -->

@@ -1,0 +1,2 @@
+[zodbupdate.decode]
+decodes = AccessControl:zodbupdate_decode_dict

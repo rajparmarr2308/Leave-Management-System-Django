@@ -1,8 +1,9 @@
 
 import os
+from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
 
     # INSTALLED APPS
     'crispy_forms',
+    'crispy_bootstrap5',
     'phonenumber_field',
     'widget_tweaks',
 
@@ -65,7 +67,7 @@ ROOT_URLCONF = 'hrsuit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+        'DIRS': [BASE_DIR / 'templates'],  # Use '/' operator for path concatenation
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,9 +76,17 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',  # Add this line
+            ],
         },
     },
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+
 
 WSGI_APPLICATION = 'hrsuit.wsgi.application'
 
@@ -127,10 +137,10 @@ USE_TZ = True
 
 
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

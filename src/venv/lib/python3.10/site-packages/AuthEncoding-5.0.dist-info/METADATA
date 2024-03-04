@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: AuthEncoding
+Version: 5.0
+Summary: Framework for handling LDAP style password hashes.
+Home-page: https://github.com/zopefoundation/AuthEncoding
+Author: Zope Foundation and Contributors
+Author-email: zope-dev@zope.org
+License: ZPL 2.1
+Project-URL: Sources, https://github.com/zopefoundation/AuthEncoding
+Project-URL: Issue Tracker, https://github.com/zopefoundation/AuthEncoding/issues
+Classifier: Development Status :: 6 - Mature
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Zope2
+Classifier: Framework :: Zope
+Classifier: Framework :: Zope :: 2
+Classifier: Framework :: Zope :: 4
+Classifier: Framework :: Zope :: 5
+Classifier: License :: OSI Approved :: Zope Public License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: System :: Systems Administration :: Authentication/Directory :: LDAP
+Requires-Python: >=3.7
+License-File: LICENSE.txt
+Provides-Extra: bcrypt
+Requires-Dist: bcrypt ; extra == 'bcrypt'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+Overview
+========
+
+AuthEncoding is a framework for handling LDAP style password hashes.
+
+It is used in Zope but does not depend on any other Zope package.
+
+Changelog
+=========
+
+5.0 (2023-01-12)
+----------------
+
+- Fix schema sorting bug.
+
+- Drop support for Python 2.7, 3.5, 3.6.
+
+- Add support for Python 3.10 and 3.11.
+
+
+4.3 (2021-06-29)
+----------------
+
+- Replace hand-rolled salt creation with ``os.urandom``
+  (`#8 <https://github.com/zopefoundation/AuthEncoding/issues/8>`)
+
+
+4.2.1 (2021-04-08)
+------------------
+
+- Test on GHA.
+
+- Skip some tests for broken crypt implementations.
+
+
+4.2 (2020-09-30)
+----------------
+
+- Add support for Python 3.8 and 3.9.
+
+
+4.1 (2018-10-30)
+----------------
+
+- Add support for Python 3.6, 3.7 and PyPy3.
+
+- Drop support for Python 2.6, 3.3 and 3.4.
+
+- Add ``BCRYPTHashingScheme``, optionally available if package is
+  installed with the `bcrypt` extra.
+
+- Accept bytes as input to ``AuthEncoding.is_encrypted``.
+
+
+4.0.0 (2015-09-30)
+------------------
+
+- Supporting Python 3.3 up to 3.5 and PyPy2.
+
+- Added ``SHA256DigestScheme``.
+
+
+3.0.0 (2015-09-28)
+------------------
+
+- Extracted from ``AccessControl 3.0.11``
